@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <style type="text/css">
+
+            html,body{
+              margin: 0;
+              padding: 0;
+              background-color: #000;
+            }
+
+            ul{
+              list-style: none;
+              position: relative;
+              width: 500px;
+              height: 600px;
+            }
+
+            li{
+              float: left;
+            }
+
+            li h3{
+              width: 100px;
+              height: 30px;
+              font-size: 20px;
+              text-align: center;
+              margin: 0;
+            }
+
+            a{
+              color: #333;
+              display: block;
+              background-color: #eee;
+            }
+
+            li.active a,
+            li a:hover{
+              color: red;
+              background-color: #fff;
+            }
+
+            li a div{
+              width: 500px;
+              height: 500px;
+              position: absolute;
+              left: 0;
+              background-color: #ccc;
+              display: none;
+            }
+
+            ul li a:hover div{
+              display: block;
+              z-index: 10;
+            }
+            ul li.active a div{
+              display: block;
+              z-index: 9;
+            }
+        </style>
+    </head>
+    <body>
+
+      <ul>
+        <li class="active">
+          <a href="#">
+            <h3>11111</h3>
+            <div>111111</div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h3>222222</h3>
+            <div>222222</div>
+          </a>
+        </li>
+         <li>
+          <a href="#">
+            <h3>33</h3>
+            <div>33</div>
+          </a>
+        </li>
+         <li>
+          <a href="#">
+            <h3>44444</h3>
+            <div>44444</div>
+          </a>
+        </li>
+    </body>
+</html>

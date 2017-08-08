@@ -1,0 +1,186 @@
+/*
+* @Author: ZhuJiaCong
+* @Date:   2017-06-07 14:38:54
+* @Last Modified by:   ZhuJiaCong
+* @Last Modified time: 2017-06-12 14:50:13
+*/
+/**
+ *  Bootstrap 扩展
+ */
+
+
+/*******************************************注册按钮*****************************************/
+
+.btn-register {
+  color: #ffffff;
+  background-color: #E92322;
+  border-color: #db3b43;
+}
+
+.btn-register:hover,
+.btn-register:focus,
+.btn-register:active,
+.btn-register.active,
+.open .dropdown-toggle.btn-register {
+  color: #ffffff;
+  background-color: #E92322;
+  border-color: #db3b43;
+}
+
+.btn-register:active,
+.btn-register.active,
+.open .dropdown-toggle.btn-register {
+  background-image: none;
+}
+
+.btn-register.disabled,
+.btn-register[disabled],
+fieldset[disabled] .btn-register,
+.btn-register.disabled:hover,
+.btn-register[disabled]:hover,
+fieldset[disabled] .btn-register:hover,
+.btn-register.disabled:focus,
+.btn-register[disabled]:focus,
+fieldset[disabled] .btn-register:focus,
+.btn-register.disabled:active,
+.btn-register[disabled]:active,
+fieldset[disabled] .btn-register:active,
+.btn-register.disabled.active,
+.btn-register[disabled].active,
+fieldset[disabled] .btn-register.active {
+  background-color: #E92322;
+  border-color: #db3b43;
+}
+
+.btn-register .badge {
+  color: #E92322;
+  background-color: #ffffff;
+}
+
+
+/*******************************************导航栏*****************************************/
+
+.navbar-wjs {
+  background-color: #fff;
+  border-color: #f5f5f5;
+  margin-bottom: 0;
+  /* border: 0; */
+  top: 0;
+  width: 100%;
+
+}
+
+.navbar-wjs .navbar-brand {
+  color: #777;
+  height: 80px;
+  font-size: 14px;
+}
+
+.navbar-wjs .navbar-brand:hover,
+.navbar-wjs .navbar-brand:focus {
+  color: #5e5e5e;
+  background-color: transparent;
+}
+
+.navbar-wjs .navbar-text {
+  color: #777;
+}
+
+.navbar-wjs .navbar-nav > li > a {
+  color: #777;
+  line-height: 48px;
+}
+
+.navbar-wjs .navbar-nav > li > a:hover,
+.navbar-wjs .navbar-nav > li > a:focus {
+  color: #333;
+  background-color: transparent;
+  border-bottom: 2px solid #e92322;
+}
+
+.navbar-wjs .navbar-nav > .active > a,
+.navbar-wjs .navbar-nav > .active > a:hover,
+.navbar-wjs .navbar-nav > .active > a:focus {
+  color: #555;
+  border-bottom: 2px solid #e92322;
+}
+
+.navbar-wjs .navbar-nav > .disabled > a,
+.navbar-wjs .navbar-nav > .disabled > a:hover,
+.navbar-wjs .navbar-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+
+.navbar-wjs .navbar-toggle {
+  border-color: #ddd;
+  margin: 23px 10px 23px 0;
+}
+
+.navbar-wjs .navbar-toggle:hover,
+.navbar-wjs .navbar-toggle:focus {
+  background-color: #ddd;
+}
+
+.navbar-wjs .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+
+.navbar-wjs .navbar-collapse,
+.navbar-wjs .navbar-form {
+  border-color: #e7e7e7;
+}
+
+.navbar-wjs .navbar-nav > .open > a,
+.navbar-wjs .navbar-nav > .open > a:hover,
+.navbar-wjs .navbar-nav > .open > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+
+@media (max-width: 767px) {
+  .navbar-wjs .navbar-nav .open .dropdown-menu > li > a {
+    color: #777;
+  }
+  .navbar-wjs .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-wjs .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #333;
+    background-color: transparent;
+  }
+  .navbar-wjs .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-wjs .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-wjs .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+  }
+  .navbar-wjs .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-wjs .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-wjs .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+  }
+}
+
+.navbar-wjs .navbar-link {
+  color: #777;
+}
+
+.navbar-wjs .navbar-link:hover {
+  color: #333;
+}
+
+.navbar-wjs .btn-link {
+  color: #777;
+}
+
+.navbar-wjs .btn-link:hover,
+.navbar-wjs .btn-link:focus {
+  color: #333;
+}
+
+.navbar-wjs .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-wjs .btn-link:hover,
+.navbar-wjs .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-wjs .btn-link:focus {
+  color: #ccc;
+}

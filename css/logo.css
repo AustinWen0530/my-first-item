@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'wjs-logo';
+  src: url('../font/wjs-logo.eot?ai83of');
+  src: url('../font/wjs-logo.eot?ai83of#iefix') format('embedded-opentype'), url('../font/wjs-logo.ttf?ai83of') format('truetype'), url('../font/wjs-logo.woff?ai83of') format('woff'), url('../font/wjs-logo.svg?ai83of#wjs-logo') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="ico-"],
+[class*=" ico-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'wjs-logo' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-logo:before {
+  content: "\e900";
+}
+
+.ico-weijinsuo:before {
+  content: "\e901";
+}

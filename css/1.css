@@ -1,0 +1,24 @@
+body {
+  background-color: #e92322;
+}
+body .container {
+  width: 100px;
+  margin: 0 auto;
+}
+body .container .row {
+  height: 200px;
+  background-color: #e92322;
+}
+body .container .row > a {
+  color: #000;
+  text-decoration: none;
+}
+body .container .row > a::hover {
+  color: #00f;
+}
+div {
+  border: 10px dashed #f00;
+}
+p {
+  border: 20px dashed #f00;
+}

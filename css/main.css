@@ -1,0 +1,576 @@
+/**
+ *  全局样式
+ */
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+.fl{float: left;}
+.fr{float: right;}
+
+/*字体图标*/
+
+@font-face {
+  font-family: 'weijinsuoIcon';
+  /*多种字体文件类型,按照 eot,svg,ttf,woff的顺序来加载*/
+  src: url('../font/MiFie-Web-Font.eot') format('embedded-opentype'), url('../font/MiFie-Web-Font.svg') format('svg'), url('../font/MiFie-Web-Font.ttf') format('truetype'), url('../font/MiFie-Web-Font.woff') format('woff');
+}
+
+
+/*图标类都以 icon-开头,使用属性选择器来设置字体类型*/
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: weijinsuoIcon;
+  font-style: normal;
+  display: inline-block;
+}
+
+
+/*字体图标类*/
+.icon-mobilephone::before {
+  content: '\e908';
+  font-size: 13px;
+}
+
+.icon-telephone::before {
+  content: '\e909';
+  font-size: 13px;
+}
+
+.icon-uniE907::before {
+    content: '\e907';
+}
+.icon-uniE903::before {
+    content: '\e903';
+}
+.icon-uniE901::before {
+    content: '\e901';
+}
+.icon-uniE900::before {
+    content: '\e900';
+}
+.icon-uniE904::before {
+    content: '\e904';
+}
+.icon-uniE902::before {
+    content: '\e902';
+}
+.icon-clock::before {
+    content: '\e906';
+}
+.icon-vedio::before {
+    content: '\e905';
+}
+.icon-news1::before{
+  content: '\e90e'
+}
+.icon-news2::before{
+  content: '\e90f'
+}
+.icon-news3::before{
+  content: '\e910'
+}
+.icon-news4::before{
+  content: '\e911'
+}
+
+
+
+/**
+ *  编程规范和约定
+ *  ① 所有的样式都要通过父元素的id来进行限定,防止出现冲突问题
+ *  ② 尽可能的使用直接子代选择器来代替后代选择器
+ *  ③ 两个模块之间的分割线,统一使用上一模块的下边框来实现
+
+
+
+/**
+ * 头部区域样式
+ */
+
+#header {
+}
+
+#header > .topbar {
+  height: 40px;
+  border-bottom: 1px solid #c0c0c0;
+  line-height: 40px;
+}
+
+
+/*使用"下一个兄弟选择器"简单实现分割线效果*/
+
+#header > .topbar > .container > .row > div + div {
+  border-left: 1px solid #c0c0c0;
+}
+
+#header > .topbar > .container > .row > div {
+  height: 40px;
+}
+
+#header .mobile-link,
+#header > .topbar div,
+#header > .topbar div:nth-child(3) a {
+  color: #888;
+  font-size: 12px;
+}
+
+#header > .topbar a:hover {
+  text-decoration: none;
+}
+
+#header .mobile-link > img {
+  display: none;
+}
+
+#header .mobile-link:hover > img {
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -60px;
+  top: 28px;
+  z-index: 9999;
+}
+
+#header .ico-logo {
+  font-size: 50px;
+  color: #e92322;
+  /*竖直方向上居中显示*/
+  vertical-align: middle;
+  line-height: 50px;
+}
+
+#header .ico-weijinsuo {
+  font-size: 32px;
+  color: #333;
+  vertical-align: middle;
+  line-height: 50px;
+}
+
+#main_ad > .carousel-inner > .item{
+    height: 410px;
+    background: center center no-repeat;
+    background-size: cover;
+}
+
+
+/*
+    网站特色
+ */
+#tese   {
+    padding: 50px 0;
+    border-bottom: 1px solid #c0c0c0;
+}
+#tese > .row > div > a .media{
+    padding-bottom: 30px;
+    padding-left: 30px;
+}
+#tese > .row > div > a{
+    color: #333;
+}
+
+#tese > .row > div > a:hover{
+    color: #e92322;
+    text-decoration: none;
+}
+
+#tese .media > .media-body > p{
+    margin: 0;
+}
+
+#tese .media > .media-left > i{
+    font-size: 34px;
+}
+
+/*
+    立即预约
+*/
+#yuyue{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+#yuyue > .container > p{
+    font-size: 16px;
+}
+
+#yuyue > .container > p > .red-text{
+    color: #e92322;
+}
+#yuyue > .container > p > a{
+    border-bottom: 1px dashed #e92322;
+}
+
+
+/*
+    产品推荐
+ */
+#products{
+    background-color: #eee;
+    padding-top: 40px;
+}
+
+
+#products > .container > .ul_wrapper > .nav-tabs {
+    padding-left: 20px;
+}
+#products > .container > .ul_wrapper > .nav-tabs > li a{
+  background-color: transparent;
+  border: 0;
+  font-size: 16px;
+  color: #333;
+}
+#products > .container > .ul_wrapper > .nav-tabs > li.active a,
+#products > .container > .ul_wrapper > .nav-tabs > li a:hover{
+  border-bottom: 3px solid #e92322;
+}
+
+#products > .container > .tab-content {
+  padding-top: 20px;
+}
+
+
+/*
+  默认样式
+ */
+#products  .tab-content > .tab-pane .panel{
+  border-radius: 0;
+  border: 0;
+}
+
+#products  .tab-content > .tab-pane .panel > .panel-heading{
+  width: 120px;
+  height: 150px;
+  float: right;
+  border: 0;
+  border-radius: 0px;
+  background-color: transparent;
+  border-left: 1px dashed #c0c0c0;
+  position: relative;
+  text-align: center;
+  padding-top: 50px;
+}
+
+/*使用before和after来添加上下小圆点*/
+#products  .tab-content > .tab-pane .panel > .panel-heading::before,
+#products  .tab-content > .tab-pane .panel > .panel-heading::after{
+    content: " ";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: absolute;
+    left: -8px;
+    background-color: #eee;
+}
+
+#products  .tab-content > .tab-pane .panel > .panel-heading::before{
+    top: -8px;
+}
+
+#products  .tab-content > .tab-pane .panel > .panel-heading::after{
+    bottom: -8px;
+    box-shadow: 0px 2px 1px #ccc inset;
+
+}
+
+#products  .tab-content > .tab-pane .panel > .panel-body{
+  height: 150px;
+  margin-right: 120px;
+  background-color: transparent;
+}
+
+#products  .tab-content > .tab-pane .panel > .panel-body h5{
+  margin: 6px;
+  font-size: 16px;
+}
+
+#products  .tab-content > .tab-pane .panel > .panel-body h6{
+  margin-bottom: 0;
+  margin-top: 14px;
+  color: #888;
+}
+
+#products  .tab-content > .tab-pane .panel > .panel-body p{
+  margin-bottom: 0;
+}
+
+#products  .tab-content > .tab-pane .panel > .panel-heading strong{
+  font-size: 30px;
+}
+#products  .tab-content > .tab-pane .panel > .panel-heading sub,
+#products  .tab-content > .tab-pane .panel > .panel-heading p{
+  font-size: 12px;
+}
+
+#products  .tab-content > .tab-pane .panel > .panel-heading .tooltips{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 30px;
+}
+
+#products  .tab-content > .tab-pane .panel > .panel-heading .tooltips > a{
+  color: green;
+  border: 1px solid green;
+  border-radius: 2px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+}
+#products  .tab-content > .tab-pane .panel > .panel-heading .tooltips > a:hover{
+  text-decoration: none;
+}
+
+#products  .tab-content > .tab-pane .panel > .panel-heading .tooltips > a.jin{
+  color: #e92322;
+  border-color: #e92322;
+}
+
+#products  .tab-content > .tab-pane .panel > .panel-heading .tooltips > a.hu{
+  color: #3c763d;
+  border-color: #3c763d;
+}
+
+/*
+  红色样式
+ */
+#products  .tab-content > .tab-pane .panel.active{
+  background-color: #e92322;
+  color: #fff;
+}
+
+#products  .tab-content > .tab-pane .panel.active > .panel-heading{
+  color: #fff;
+}
+
+#products  .tab-content > .tab-pane .panel.active > .panel-body h6{
+  color: #d0d0d0;
+}
+
+#products  .tab-content > .tab-pane .panel.active::before{
+  content: "\e915";
+  font-family: weijinsuoIcon;
+  font-style: normal;
+  font-size: 41px;
+  position: absolute;
+  top: -9px;
+}
+
+#products  .tab-content > .tab-pane .panel.active > .panel-heading .tooltips > a.jin{
+  color: #00bcd4;
+  border-color: #00bcd4;
+}
+
+/*
+  灰色样式
+ */
+#products  .tab-content > .tab-pane .panel.disabled{
+  background-color: #ddd;
+}
+#products  .tab-content > .tab-pane .panel.disabled > .panel-body h6{
+  color: #666;
+}
+
+/*
+    三种印章样式
+ */
+#products  .tab-content > .tab-pane .row .panel-default{
+    position: relative;
+    width: 100%;
+}
+.disabled.icon-yijieqing::before,
+.disabled.icon-huankuanzhong::before,
+.disabled.icon-yimanbiao::before{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    font-size: 120px;
+    line-height: 150px;
+    top: 0;
+    left: 50%;
+    margin-left: -60px;
+    color: #e92322;
+}
+
+.disabled.icon-huankuanzhong::before{
+    content: "\e925";
+}
+.disabled.icon-yijieqing::before{
+    content: '\e926';
+}
+.disabled.icon-yimanbiao::before{
+    content: '\e927';
+}
+
+
+/*
+    新闻模块
+ */
+#news{
+  padding-top: 50px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #c0c0c0;
+}
+
+#news ul{
+  list-style: none;
+}
+#news > .container  >.row > .title > h4{
+  border-bottom: 1px dashed #888;
+    padding: 0px 20px;
+    line-height: 50px;
+    font-size: 18px;
+    color: #555;
+    position: relative;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#news > .container  >.row > .title h4::before{
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #888;
+  position: absolute;
+  right: -10px;
+  bottom: -5px;
+}
+
+/*#news > .container  >.row > .title li{
+    display: none;
+    text-align: right;
+}
+#news > .container >.row  > .title li > span{
+    border-bottom: 1px dashed #888;
+    padding: 10px 20px;
+    line-height: 50px;
+    font-size: 18px;
+    color: #555;
+    position: relative;
+}
+
+#news > .container  >.row > .title li > span::before{
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #888;
+  position: absolute;
+  right: -10px;
+  bottom: -5px;
+}
+
+#news > .container  >.row > .title li.active{
+    display: block;
+}*/
+
+#news > .container  >.row > .tabs > ul{
+  padding: 0;
+}
+
+#news > .container  >.row > .tabs li > a{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    background-color: #ccc;
+    color: #666;
+    line-height: 60px;
+    text-align: center;
+    font-size: 30px;
+}
+#news > .container  >.row > .tabs{
+  z-index: 2;
+}
+#news > .container  >.row > .tabs li{
+  text-align: center;
+}
+#news > .container  >.row > .tabs li.active > a{
+  background-color: #e92322;
+  color: #fff;
+}
+
+#news > .container >.row > .content{
+  border-left: 1px dashed #ccc;
+  height: 100%;
+  margin-left: -30px;
+  z-index: 1;
+}
+
+#news > .container >.row > .content  > div{
+  display: none;
+  height: 100%;
+}
+
+#news > .container >.row  > .content   >div.active{
+  display: block;
+}
+
+#news > .container >.row > .content  > div li{
+  line-height: 26px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+
+/*
+    合作伙伴
+ */
+
+#partner{
+  height: 100px;
+  text-align: center;
+}
+
+#partner p{
+  font-size: 26px;
+  margin-top: 20px;
+}
+#partner > p > a{
+  font-size: 60px;
+  text-decoration: none;
+  color: #666;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#partner a+a{
+  border-left: 1px dashed #ccc;
+}
+#partner a:hover{
+  color: #e92322;
+}
+
+.icon-partner01::before {
+    content: '\e930';
+}
+.icon-partner02::before {
+    content: '\e92f';
+}
+.icon-partner03::before {
+    content: '\e92e';
+}
+.icon-partner04::before {
+    content: '\e92a';
+}
+.icon-partner05::before {
+    content: '\e929';
+}
+.icon-partner06::before {
+    content: '\e931';
+}
+.icon-partner07::before {
+    content: '\e92c';
+}
+.icon-partner08::before {
+    content: '\e92b';
+}
+.icon-partner09::before {
+    content: '\e92d';
+}
